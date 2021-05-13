@@ -1,0 +1,63 @@
+body {
+    background-color: #efefef;
+}
+
+#root {
+    background: white;
+    width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#root ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#root ul li {
+    padding: 8px 0;
+    border-bottom: 1px dotted black;
+}
+
+#root a {
+    display: inline-block;
+    float: right;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 18px;
+    line-height: 17px;
+}
+
+.newtodo {
+    margin: 0 0 10px 10px;
+}
+
+#root button {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    background-color: #ffffff;
+    font-weight: bolder;
+}
+
+.newtodo input {
+    width: 220px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 1px;
+    outline: none;
+    font-size: 20px;
+}

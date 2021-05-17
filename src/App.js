@@ -1,78 +1,9 @@
 import React from 'react';
-import './App.css'
-class TodoItem extends React.Component{
-  constructor(){
-    super();
-    this.handleChange=this.handleChange.bind(this);
-    this.handleDelete=this.handleDelete.bind(this);
-  }
-  handleChange(){
-    this.props.toggle(this.props.id);
-  }
-  handleDelete(){
-    this.props.remove(this.props.id);
-    
-  }
-  
-  render(){
-    
-    return(
-      
-      <li>
-        <input type="checkbox" checked={this.props.status}
-        onChange={this.handleChange}/>
-        {this.props.status?(
-          <s>{this.props.subject}</s>
-        ) : (
-          this.props.subject
-        )}
-        <a href="#" onClick={this.handleDelete}>&times;</a>
-        </li>
-    )
-  }
-}
-class NewTodo extends React.Component {
-  constructor() {
-      super();
-      this.state = {
-          subject: ''
-      }
+import NewTodo from './components/NewTodo';
+import TodoItems from './components/TodoItems';
+import './App.css';
 
-      this.handleAdd = this.handleAdd.bind(this);
-      this.handleChange = this.handleChange.bind(this);
-  }
-  handleAdd() {
-      var subject = this.state.subject;
-      this.props.add(subject);
-
-      this.setState({
-          subject: ''
-      })
-  }
-  handleChange(e) {
-      this.setState({
-          subject: e.target.value
-      })
-
-  }
-  render() {
-      return ( 
-        <div>
-          <h1> ToDo List </h1> 
-          <div className = 'newtodo'>
-            <input onChange = { this.handleChange }
-              type = "text"
-              value = { this.state.subject }
-              placeholder = "To Do..."/>
-            <button onClick = { this.handleAdd } > + </button> 
-          </div> 
-        </div>
-      )
-  }
-}
-
-
-class TodoList extends React.Component{
+class App extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -114,7 +45,7 @@ class TodoList extends React.Component{
         <ul>
         {this.state.items.map(function(items,index){
           return(
-            <TodoItem
+            <TodoItems
             key = {index}
             id = {index}
             status={items.status}
@@ -128,8 +59,5 @@ class TodoList extends React.Component{
       </div>
     )
   }
-
 }
-
-
-export default TodoList;
+export default App;

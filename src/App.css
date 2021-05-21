@@ -4,7 +4,7 @@ body {
 
 #root {
     background: white;
-    width: 400px;
+    width: 600px;
     margin: 40px auto;
     padding: 25px;
     border: 3px solid black;
@@ -20,6 +20,7 @@ body {
 #root ul li {
     padding: 8px 0;
     border-bottom: 1px dotted black;
+    margin-bottom: 10px;
 }
 
 #root a {
@@ -60,4 +61,39 @@ body {
     box-shadow: 0px 1px;
     outline: none;
     font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.search input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 1px;
+    outline: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+#root #searchBtn {
+    width: 100px;
+    height: 50px;
+}
+
+button:hover {
+    color: rgb(108, 235, 92);
+}
+
+#root ul>input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 1px;
+    outline: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 }

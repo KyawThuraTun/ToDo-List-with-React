@@ -15,18 +15,19 @@ class TodoItems extends React.Component {
     }
 
     render() {
-
-        return (
-
-            <li>
+        return(
+            <li>    
             <input type = "checkbox"
             checked = { this.props.status }
             onChange = { this.handleChange }/> 
             {this.props.status ? ( 
                 <s> {this.props.subject} </s>
+                
                 ) : 
                 (this.props.subject)
-            } 
+            }
+            <br />{this.props.date}
+             
             <a href = "#" onClick = { this.handleDelete }> &times;</a> 
             </li>
         )
